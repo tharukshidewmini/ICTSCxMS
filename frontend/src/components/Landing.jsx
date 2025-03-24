@@ -7,46 +7,48 @@ const TechnologyPortal = () => {
             title: 'Azure Cloud Azure 101',
             location: 'On-Campus',
             duration: '1 Hour',
-            type: 'Workshop'
+            type: 'Workshop',
+            image: "/img/azure-icon.png",
+            description: "Introduction to cloud computing fundamentals using Microsoft Azure"
         },
         {
             title: 'Azure AI Solutions Development',
             location: 'On-Campus',
             duration: '1 Hour',
-            type: 'Workshop'
+            type: 'Workshop',
+            image: "/img/openai-icon.png",
+            description: "Learn to build intelligent applications with Azure Cognitive Services"
         },
         {
             title: 'DevOps with Azure Pipeline',
             location: 'On-Campus',
             duration: '1 Hour',
-            type: 'Workshop'
+            type: 'Workshop',
+            image: "/img/Azure-Devops.png",
+            description: "Implement CI/CD pipelines using Azure DevOps for efficient software delivery"
         }
     ];
 
     const speakers = [
         {
-            name: "Dr. Sarah Johnson",
-            title: "Cloud Solutions Architect, Microsoft",
-            bio: "Dr. Johnson has over 15 years of experience developing cloud architectures and is a certified Azure expert. She specializes in enterprise cloud migrations and optimization.",
-            image: "/api/placeholder/150/150"
-        },
-        {
-            name: "Michael Patel",
-            title: "AI Research Lead, Tech Innovations",
-            bio: "Michael leads AI research initiatives and has published numerous papers on machine learning applications in cloud environments. He's been working with Azure AI services since their inception.",
-            image: "/api/placeholder/150/150"
-        },
-        {
-            name: "Jessica Wong",
-            title: "Senior DevOps Engineer, CloudScale",
-            bio: "Jessica is a DevOps specialist with expertise in CI/CD pipelines and infrastructure automation. She has helped dozens of organizations implement Azure DevOps solutions.",
-            image: "/api/placeholder/150/150"
-        },
-        {
-            name: "David Muriuki",
+            name: "Abishek Haththakage",
             title: "Microsoft Student Ambassador",
-            bio: "David is a passionate advocate for cloud technologies and leads workshops on Azure fundamentals. He has been recognized as a top Microsoft Student Ambassador in the region.",
-            image: "/api/placeholder/150/150"
+            image: "/img/abishek.jpg"
+        },
+        {
+            name: "Chamini Palliyaguru",
+            title: "Microsoft Student Ambassador",
+            image: "/img/chamini.JPG"
+        },
+        {
+            name: "Theekshana Nirmal",
+            title: "UG at Uva Wellassa University",
+            image: "/img/theekshana.jpeg"
+        },
+        {
+            name: "Vihini Wathsiluni",
+            title: "UG at Uva Wellassa University",
+            image: "/img/vihini.jpg"
         }
     ];
 
@@ -93,6 +95,7 @@ const TechnologyPortal = () => {
                 </div>
             </div>
 
+
             {/* Featured Programs Section */}
             <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
                 <div className="text-center mb-12">
@@ -104,16 +107,16 @@ const TechnologyPortal = () => {
                         <div key={index} className="bg-white rounded-lg p-6 shadow hover:shadow-lg transition-shadow">
                             <div className="flex items-center justify-between mb-4">
                                 <img
-                                    src="/api/placeholder/120/120"
-                                    alt={program.department}
-                                    className="w-16 h-16 rounded-lg"
+                                    src={program.image}
+                                    alt={program.title}
+                                    className="w-16 h-16 rounded-lg object-cover"
                                 />
                                 <button className="border border-gray-200 px-3 py-1 rounded text-sm">
                                     {program.type}
                                 </button>
                             </div>
                             <h3 className="text-xl font-semibold mb-2">{program.title}</h3>
-                            <p className="text-gray-600 mb-4">{program.department}</p>
+                            <p className="text-gray-600 mb-4">{program.description}</p>
                             <div className="flex items-center text-gray-500 mb-4">
                                 <MapPin className="w-4 h-4 mr-2" />
                                 {program.location}
@@ -137,9 +140,9 @@ const TechnologyPortal = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl font-bold mb-4">Meet Our Speakers</h2>
-                        <p className="text-gray-600 max-w-2xl mx-auto">
+                        {/* <p className="text-gray-600 max-w-2xl mx-auto">
                             Learn from industry experts and thought leaders in the fields of cloud computing, artificial intelligence, and DevOps
-                        </p>
+                        </p> */}
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {speakers.map((speaker, index) => (
@@ -158,9 +161,6 @@ const TechnologyPortal = () => {
                                     <div className="mt-4 flex space-x-3">
                                         <a href="#" className="text-gray-500 hover:text-indigo-600">
                                             <Linkedin className="w-5 h-5" />
-                                        </a>
-                                        <a href="#" className="text-gray-500 hover:text-indigo-600">
-                                            <Twitter className="w-5 h-5" />
                                         </a>
                                     </div>
                                 </div>

@@ -123,12 +123,6 @@ const TechnologyPortal = () => {
                             </div>
                             <div className="flex items-center justify-between">
                                 <span className="text-indigo-600 font-semibold">{program.duration}</span>
-                                <a
-                                    href="#"
-                                    className="text-gray-600 hover:text-indigo-600 px-4 py-2 rounded transition-colors"
-                                >
-                                    Learn More
-                                </a>
                             </div>
                         </div>
                     ))}
@@ -159,9 +153,6 @@ const TechnologyPortal = () => {
                                     <p className="text-indigo-600 text-sm mb-3">{speaker.title}</p>
                                     <p className="text-gray-600 text-sm">{speaker.bio}</p>
                                     <div className="mt-4 flex space-x-3">
-                                        <a href="#" className="text-gray-500 hover:text-indigo-600">
-                                            <Linkedin className="w-5 h-5" />
-                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -198,7 +189,7 @@ const TechnologyPortal = () => {
                         </div>
                         <div className="mt-10 lg:mt-0 flex justify-center items-center">
                             <img
-                                src="/api/placeholder/500/400"
+                                src="/img/qr.png"
                                 alt="MS Club of UWU"
                                 className="rounded-lg shadow-lg"
                             />
@@ -208,72 +199,45 @@ const TechnologyPortal = () => {
             </div>
 
 
-            {/* Footer */}
-            <footer className="bg-indigo-900 text-white">
-                <div className="max-w-7xl mx-auto px-4 pt-12 pb-8 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-                        <div className="mb-8 md:mb-0">
-                            <h3 className="text-xl font-bold mb-4">MS Club of Uva Wellassa University</h3>
-                            <p className="text-gray-300 mb-4">
-                                Uva Wellassa University,<br />
-                                Badulla, Sri Lanka
-                            </p>
-                            <div className="flex space-x-4 mt-6">
-                                <a href="#" className="text-gray-300 hover:text-white">
-                                    <Facebook className="w-5 h-5" />
-                                </a>
-                                <a href="#" className="text-gray-300 hover:text-white">
-                                    <Twitter className="w-5 h-5" />
-                                </a>
-                                <a href="#" className="text-gray-300 hover:text-white">
-                                    <Linkedin className="w-5 h-5" />
-                                </a>
-                                <a href="#" className="text-gray-300 hover:text-white">
-                                    <Github className="w-5 h-5" />
-                                </a>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 className="text-lg font-semibold mb-4">Club Programs</h3>
-                            <ul className="space-y-2">
-                                <li><a href="#" className="text-gray-300 hover:text-white">Tech Workshops</a></li>
-                                <li><a href="#" className="text-gray-300 hover:text-white">Hackathons</a></li>
-                                <li><a href="#" className="text-gray-300 hover:text-white">Networking Events</a></li>
-                                <li><a href="#" className="text-gray-300 hover:text-white">Technical Trainings</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 className="text-lg font-semibold mb-4">Resources</h3>
-                            <ul className="space-y-2">
-                                <li><a href="#" className="text-gray-300 hover:text-white">Event Calendar</a></li>
-                                <li><a href="#" className="text-gray-300 hover:text-white">Club Handbook</a></li>
-                                <li><a href="#" className="text-gray-300 hover:text-white">Blog</a></li>
-                                <li><a href="#" className="text-gray-300 hover:text-white">Career Resources</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-                            <ul className="space-y-3">
-                                <li className="flex items-center">
-                                    <Phone className="w-4 h-4 mr-2" />
-                                    <span>041-2294750</span>
-                                </li>
-                                <li className="flex items-center">
-                                    <Mail className="w-4 h-4 mr-2" />
-                                    <span>msclub@uwu.ac.lk</span>
-                                </li>
-                                <li className="flex items-center">
-                                    <MapPin className="w-4 h-4 mr-2" />
-                                    <span>Uva Wellassa University, Badulla</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="border-t border-indigo-800 mt-12 pt-8 text-center">
-                        <p className="text-gray-300">© {new Date().getFullYear()} MS Club of Uva Wellassa University. All rights reserved.</p>
-                    </div>
+{/* Footer */}
+<footer className="bg-indigo-900 text-white">
+    <div className="max-w-7xl mx-auto px-4 pt-12 pb-8 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
+            <div className="mb-8 md:mb-0">
+                <h3 className="text-xl font-bold mb-4">MS Club of Uva Wellassa University</h3>
+                <p className="text-gray-300 mb-4">
+                    Uva Wellassa University,<br />
+                    Badulla, Sri Lanka
+                </p>
+                <div className="flex space-x-4 mt-6">
+                    <a href="https://web.facebook.com/msclubuwu/?_rdc=1&_rdr#" className="text-gray-300 hover:text-white">
+                        <Facebook className="w-5 h-5" />
+                    </a>
+                    <a href="https://www.linkedin.com/company/ms-club-of-uva-wellassa-university" className="text-gray-300 hover:text-white">
+                        <Linkedin className="w-5 h-5" />
+                    </a>
                 </div>
-            </footer>
+            </div>
+            <div>
+                <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
+                <ul className="space-y-3">
+                    <li className="flex items-center">
+                        <Phone className="w-4 h-4 mr-2" />
+                        <span>076-5576407</span>
+                    </li>
+                    <li className="flex items-center">
+                        <Mail className="w-4 h-4 mr-2" />
+                        <span>msclub@uwu.ac.lk</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div className="border-t border-indigo-800 mt-12 pt-8 text-center">
+            <p className="text-gray-300">© {new Date().getFullYear()} MS Club of Uva Wellassa University. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
         </div>
     );
 };

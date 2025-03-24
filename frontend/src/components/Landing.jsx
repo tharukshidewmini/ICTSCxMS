@@ -23,7 +23,32 @@ const TechnologyPortal = () => {
         }
     ];
 
-
+    const speakers = [
+        {
+            name: "Dr. Sarah Johnson",
+            title: "Cloud Solutions Architect, Microsoft",
+            bio: "Dr. Johnson has over 15 years of experience developing cloud architectures and is a certified Azure expert. She specializes in enterprise cloud migrations and optimization.",
+            image: "/api/placeholder/150/150"
+        },
+        {
+            name: "Michael Patel",
+            title: "AI Research Lead, Tech Innovations",
+            bio: "Michael leads AI research initiatives and has published numerous papers on machine learning applications in cloud environments. He's been working with Azure AI services since their inception.",
+            image: "/api/placeholder/150/150"
+        },
+        {
+            name: "Jessica Wong",
+            title: "Senior DevOps Engineer, CloudScale",
+            bio: "Jessica is a DevOps specialist with expertise in CI/CD pipelines and infrastructure automation. She has helped dozens of organizations implement Azure DevOps solutions.",
+            image: "/api/placeholder/150/150"
+        },
+        {
+            name: "David Muriuki",
+            title: "Microsoft Student Ambassador",
+            bio: "David is a passionate advocate for cloud technologies and leads workshops on Azure fundamentals. He has been recognized as a top Microsoft Student Ambassador in the region.",
+            image: "/api/placeholder/150/150"
+        }
+    ];
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
@@ -53,17 +78,43 @@ const TechnologyPortal = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col md:flex-row items-center justify-between">
                         <div className="mb-6 md:mb-0">
-                            <h2 className="text-2xl font-bold mb-2">Need assistance with your application?</h2>
+                            <h2 className="text-2xl font-bold mb-2">Need assistance?</h2>
                             <p className="text-white text-opacity-90">
-                                Our AI assistant can answer all your questions about our Azure certification programs
+                                Our AI assistant can answer all your questions about our Azure workshop programs
                             </p>
                         </div>
                         <button
-
                             className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-medium flex items-center hover:bg-opacity-90 transition-colors shadow-lg"
                         >
                             <MessageCircle className="mr-2 h-5 w-5" />
                             Chat with our AI Assistant
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            {/* QR Code Section */}
+            <div className="bg-white py-16">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-10">
+                        <h2 className="text-3xl font-bold mb-4">Register Now</h2>
+                        <p className="text-gray-600 max-w-2xl mx-auto">
+                            Scan the QR code below to register for our upcoming Azure workshops. Don't miss this opportunity to enhance your cloud computing skills!
+                        </p>
+                    </div>
+                    <div className="flex flex-col items-center justify-center">
+                        <div className="bg-gradient-to-r from-indigo-100 to-blue-100 p-8 rounded-xl shadow-md">
+                            <img
+                                src="/api/placeholder/250/250"
+                                alt="Registration QR Code"
+                                className="w-64 h-64"
+                            />
+                        </div>
+                        <p className="mt-6 text-gray-700 font-medium">
+                            Registration deadline: April 10, 2025
+                        </p>
+                        <button className="mt-6 bg-indigo-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-indigo-700 transition-colors shadow-md">
+                            Register Manually
                         </button>
                     </div>
                 </div>
@@ -108,6 +159,44 @@ const TechnologyPortal = () => {
                 </div>
             </div>
 
+            {/* Speakers Section */}
+            <div className="bg-gradient-to-r from-indigo-50 to-blue-50 py-16">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl font-bold mb-4">Meet Our Speakers</h2>
+                        <p className="text-gray-600 max-w-2xl mx-auto">
+                            Learn from industry experts and thought leaders in the fields of cloud computing, artificial intelligence, and DevOps
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {speakers.map((speaker, index) => (
+                            <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                                <div className="p-1 bg-gradient-to-r from-indigo-500 to-blue-500">
+                                    <img
+                                        src={speaker.image}
+                                        alt={speaker.name}
+                                        className="w-full aspect-square object-cover"
+                                    />
+                                </div>
+                                <div className="p-6">
+                                    <h3 className="text-xl font-semibold mb-1">{speaker.name}</h3>
+                                    <p className="text-indigo-600 text-sm mb-3">{speaker.title}</p>
+                                    <p className="text-gray-600 text-sm">{speaker.bio}</p>
+                                    <div className="mt-4 flex space-x-3">
+                                        <a href="#" className="text-gray-500 hover:text-indigo-600">
+                                            <Linkedin className="w-5 h-5" />
+                                        </a>
+                                        <a href="#" className="text-gray-500 hover:text-indigo-600">
+                                            <Twitter className="w-5 h-5" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
             {/* About Us Section */}
             <div className="bg-white py-16">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -144,7 +233,6 @@ const TechnologyPortal = () => {
                     </div>
                 </div>
             </div>
-
 
             {/* Footer */}
             <footer className="bg-indigo-900 text-white">
@@ -212,7 +300,6 @@ const TechnologyPortal = () => {
                     </div>
                 </div>
             </footer>
-
         </div>
     );
 };

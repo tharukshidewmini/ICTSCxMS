@@ -93,33 +93,6 @@ const TechnologyPortal = () => {
                 </div>
             </div>
 
-            {/* QR Code Section */}
-            <div className="bg-white py-16">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-10">
-                        <h2 className="text-3xl font-bold mb-4">Register Now</h2>
-                        <p className="text-gray-600 max-w-2xl mx-auto">
-                            Scan the QR code below to register for our upcoming Azure workshops. Don't miss this opportunity to enhance your cloud computing skills!
-                        </p>
-                    </div>
-                    <div className="flex flex-col items-center justify-center">
-                        <div className="bg-gradient-to-r from-indigo-100 to-blue-100 p-8 rounded-xl shadow-md">
-                            <img
-                                src="/api/placeholder/250/250"
-                                alt="Registration QR Code"
-                                className="w-64 h-64"
-                            />
-                        </div>
-                        <p className="mt-6 text-gray-700 font-medium">
-                            Registration deadline: April 10, 2025
-                        </p>
-                        <button className="mt-6 bg-indigo-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-indigo-700 transition-colors shadow-md">
-                            Register Manually
-                        </button>
-                    </div>
-                </div>
-            </div>
-
             {/* Featured Programs Section */}
             <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
                 <div className="text-center mb-12">
@@ -233,6 +206,7 @@ const TechnologyPortal = () => {
                     </div>
                 </div>
             </div>
+
 
             {/* Footer */}
             <footer className="bg-indigo-900 text-white">

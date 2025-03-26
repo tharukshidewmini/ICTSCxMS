@@ -1,7 +1,9 @@
-import React from "react";
+import {useState} from "react";
+import { Link } from "react-router-dom";
 import { BookOpen, MapPin, MessageCircle, Mail, Phone, Github, Linkedin, Facebook, Twitter } from "lucide-react";
 
 const TechnologyPortal = () => {
+    const [showChatbot, setShowChatbot] = useState(false); 
     const featuredPrograms = [
         {
             title: 'Azure Cloud Azure 101',
@@ -53,12 +55,12 @@ const TechnologyPortal = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
-            {/* Hero Section */}
+<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 relative">
+                {/* Hero Section */}
             <div className="relative bg-indigo-900 text-white">
                 <div className="absolute inset-0">
                     <img
-                        src="/img/landing.jpg"
+                        src="/img/uwu.jpg"
                         alt="University campus"
                         className="w-full h-full object-cover opacity-20"
                     />
@@ -85,12 +87,17 @@ const TechnologyPortal = () => {
                                 Our AI assistant can answer all your questions about our Azure workshop programs
                             </p>
                         </div>
+                        <Link to="/chatbot">
+
                         <button
-                            className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-medium flex items-center hover:bg-opacity-90 transition-colors shadow-lg"
-                        >
-                            <MessageCircle className="mr-2 h-5 w-5" />
-                            Chat with our AI Assistant
-                        </button>
+  onClick={() => setShowChatbot(true)}
+  className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-medium flex items-center hover:bg-opacity-90 transition-colors shadow-lg"
+>
+  <MessageCircle className="mr-2 h-5 w-5" />
+  Chat with our AI Assistant
+</button>
+                        </Link>
+
                     </div>
                 </div>
             </div>
@@ -237,6 +244,12 @@ const TechnologyPortal = () => {
         </div>
     </div>
 </footer>
+
+{showChatbot && (
+  <div className="fixed bottom-4 right-4 z-50">
+    <Chatbot onClose={() => setShowChatbot(false)} />
+  </div>
+)}
 
         </div>
     );

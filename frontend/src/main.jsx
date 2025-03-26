@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import Landing from "./components/Landing";
 import "./index.css";
+import Chatbot from "./components/chatbot/Chatbot";
 
 const router = createBrowserRouter([
   {
@@ -11,6 +12,13 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       { path: "/", element: <Landing /> },
+    ],
+  },
+  {
+    path: "/chatbot",
+    element: <Chatbot />,
+    children: [
+      { path: "/chatbot", element: <Chatbot /> },
     ],
   },
 ]);

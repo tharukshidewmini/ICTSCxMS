@@ -118,9 +118,9 @@ const TechnologyPortal = () => {
                                     alt={program.title}
                                     className="w-16 h-16 rounded-lg object-cover"
                                 />
-                                <button className="border border-gray-200 px-3 py-1 rounded text-sm">
+                                {/* <button className="border border-gray-200 px-3 py-1 rounded text-sm">
                                     {program.type}
-                                </button>
+                                </button> */}
                             </div>
                             <h3 className="text-xl font-semibold mb-2">{program.title}</h3>
                             <p className="text-gray-600 mb-4">{program.description}</p>

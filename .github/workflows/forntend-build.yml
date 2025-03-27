@@ -19,9 +19,4 @@ jobs:
                 cd frontend  
                 npm install
                 npm run build
-    
-            - name: Copy dist to public folder
-              run: cp -r dist public
-              
-            - name: Check files in public
-              run: ls public
+                ls

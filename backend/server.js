@@ -44,6 +44,10 @@ app.post('/chat', async (req, res) => {
   }
 });
 
+app.get('/', (req, res) => {
+  res.send('<h1>The backend is running perfectly!</h1>');
+});
+
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);

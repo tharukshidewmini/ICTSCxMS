@@ -1,0 +1,27 @@
+name: React Frontend Build
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Get code
+              uses: actions/checkout@v3
+    
+            - name: Install dependencies
+              run: npm install
+    
+            - name: Build
+              run: npm run build
+    
+            - name: Copy dist to public folder
+              run: cp -r dist public
+              
+            - name: Check files in public
+              run: ls public
